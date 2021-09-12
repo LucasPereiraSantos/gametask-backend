@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="gametaskModelStoreContainer" CdmEntityContainer="gametaskEntities">
+    <EntitySetMapping Name="gm_tarefa">
+      <EntityTypeMapping TypeName="gametaskModel.gm_tarefa">
+        <MappingFragment StoreEntitySet="gm_tarefa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="descricao" ColumnName="descricao" />
+          <ScalarProperty Name="dataInicio" ColumnName="dataInicio" />
+          <ScalarProperty Name="dataFim" ColumnName="dataFim" />
+          <ScalarProperty Name="nivelDificuldade" ColumnName="nivelDificuldade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="gm_usuario">
+      <EntityTypeMapping TypeName="gametaskModel.gm_usuario">
+        <MappingFragment StoreEntitySet="gm_usuario">
+          <ScalarProperty Name="userId" ColumnName="userId" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="senha" ColumnName="senha" />
+          <ScalarProperty Name="nome" ColumnName="nome" />
+          <ScalarProperty Name="moeda" ColumnName="moeda" />
+          <ScalarProperty Name="nivelVida" ColumnName="nivelVida" />
+          <ScalarProperty Name="nivelExperiencia" ColumnName="nivelExperiencia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

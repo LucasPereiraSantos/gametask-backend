@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="gametaskModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="gm_tarefa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="descricao" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="dataInicio" Type="DateTime" Precision="3" />
+    <Property Name="dataFim" Type="DateTime" Precision="3" />
+    <Property Name="nivelDificuldade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="gm_usuario">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="senha" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="moeda" Type="Int32" />
+    <Property Name="nivelVida" Type="Int32" />
+    <Property Name="nivelExperiencia" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="gametaskEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="gm_tarefa" EntityType="Self.gm_tarefa" />
+    <EntitySet Name="gm_usuario" EntityType="Self.gm_usuario" />
+  </EntityContainer>
+</Schema>
